@@ -61,6 +61,7 @@ function getRandomIntInclusive(min, max) {
 // Criando a palavra a ser adivinhada usando o número aleatório
 const wordIndex = getRandomIntInclusive(0, 219);
 const word = possibleWords[wordIndex].toUpperCase();
+console.log(word)
 
 // Transformas as letras em botões, insere o listener e aplica os botões na DOM
 keys.forEach((key) => {
@@ -186,7 +187,7 @@ const checkRow = () => {
   if (currentTile > 4) {
     flipAndColorTiles();
     if (word == wordToCheck) {
-      showMessage("BRABO! :D");
+      showMessage("PARABÉNS! :D");
       isGameOver = true;
       return;
     } else {
